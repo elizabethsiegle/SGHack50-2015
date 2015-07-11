@@ -7,12 +7,33 @@
 //
 
 import UIKit
+import Foundation
+import CoreLocation
 
 class ViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let manager = CLLocationManager()
+        if CLLocationManager.locationServicesEnabled() {
+            manager.startUpdatingLocation()
+        }
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            manager.requestAlwaysAuthorization()
+        }
+        
+    }
+    
+    func locationManager(manager: CLLocationManager!, didVisit visit: CLVisit!) {
+        if visit.departureDate.isEqualToDate(NSDate.distantFuture() as! NSDate) {
+            // User has arrived, but not left, the location
+            print("You are at: /latitude, /longitude")
+        } else {
+            // The visit is complete
+            print("You are leaving: /latitude, /longitude")
+        }
     }
 
     override func didReceiveMemoryWarning() {
