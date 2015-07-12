@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
@@ -25,6 +25,18 @@
                                 </label>
                             </items>
                         </group>
+                        <label width="125.5" alignment="left" text="Latitude" id="dG0-qW-AU6" userLabel="latSliderLabel"/>
+                        <slider width="1" alignment="left" value="1.3500000000000001" minimum="1.25" maximum="1.45" steps="10" id="cfJ-Z1-Hx8">
+                            <connections>
+                                <action selector="latSlider:" destination="AgC-eL-Hgc" id="BVB-Jh-ejV"/>
+                            </connections>
+                        </slider>
+                        <label alignment="left" text="Longtitude" id="NHW-OZ-uVO" userLabel="longSliderLabel"/>
+                        <slider width="1" alignment="left" value="103.8" minimum="103.7" maximum="103.90000000000001" steps="10" id="L8A-fZ-lDb">
+                            <connections>
+                                <action selector="longSlider:" destination="AgC-eL-Hgc" id="ore-OZ-Myg"/>
+                            </connections>
+                        </slider>
                     </items>
                     <menu key="menu" id="AO8-Q5-wox">
                         <items>
@@ -54,7 +66,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="262" y="245"/>
+            <point key="canvasLocation" x="370" y="388"/>
         </scene>
         <!--Page3 Interface Controller-->
         <scene sceneID="yTx-oX-ZwY">

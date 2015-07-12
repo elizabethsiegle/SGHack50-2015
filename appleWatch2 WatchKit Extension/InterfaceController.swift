@@ -24,14 +24,8 @@ class InterfaceController: WKInterfaceController {
     @IBAction func longSlider(value: Float) {
         self.longSliderLabel.setText(value.description)
         userLocation[1]=Double(value)
+        
     }
-
-    
-    
-    
-    
-
-
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
