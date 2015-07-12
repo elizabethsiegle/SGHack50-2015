@@ -18,19 +18,22 @@ class page1InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        /*let defaults = NSUserDefaults.standardUserDefaults()
-        var imageURL=String()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var imageURL=""
         if let temp = defaults.dictionaryForKey("json")
         {
             let jsonArray=temp["result"] as! NSArray
             var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
-            
+            var mediaArray=jsonArray[Int(locationOfMemories[0][2])]["media"] as! NSArray
+            if mediaArray.count>0{
+                imageURL=mediaArray[0]["url"] as! String
+            }
         }
-        
-        let url = NSURL(string: "http://www.singaporememory.sg/thumbnails/contentFiles/140167?size=2")
-        let data = NSData(contentsOfURL: url!)
-        page1Image.setImage(UIImage(data: data!))*/
-        // Configure interface objects here.
+        if imageURL != ""{
+            let url = NSURL(string: imageURL)
+            let data = NSData(contentsOfURL: url!)
+            page1Image.setImage(UIImage(data: data!))
+        }// Configure interface objects here.
     }
     
 
