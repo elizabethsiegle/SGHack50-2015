@@ -42,6 +42,8 @@ class page3InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        println(userLocation)
+        self.page3Map.removeAllAnnotations()
         let defaults = NSUserDefaults.standardUserDefaults()
         let bundle = NSBundle.mainBundle()
         let path = bundle.pathForResource("MemoryData", ofType: "json")
@@ -103,15 +105,19 @@ class page3InterfaceController: WKInterfaceController {
                 self.page3Map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Red)
             }
         }
-        
+        location = CLLocationCoordinate2D(
+            latitude: userLocation[0],
+            longitude: userLocation[1]
+        )
         self.page3Map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Purple)
-        
+
         
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        
     }
     
 }

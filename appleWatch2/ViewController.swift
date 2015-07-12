@@ -47,6 +47,7 @@ class ViewController: UIViewController {
             println(location.latitude)
             annotation.coordinate = location
             annotation.title = i["title"] as! String
+            annotation.subtitle=i["link"] as! String
             mapView.addAnnotation(annotation)
             AudioServicesPlaySystemSound(1005);
         }
