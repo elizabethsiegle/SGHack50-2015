@@ -19,8 +19,12 @@ class InterfaceController: WKInterfaceController {
         var R=6371.0
         var x=(lng2-lng1) * cos(0.5*(lat2+lat1))
         var y=lat2-lat1
-        return R*sqrt(x*x + y*y)
+        var distance = R*sqrt(x*x + y*y)
+        return distance
     }
+    
+    
+    //println("You are \(distance) from this place")
     
     func sorterForDistance(this:[Double], that:[Double]) -> Bool {
 
@@ -37,36 +41,35 @@ class InterfaceController: WKInterfaceController {
         
         
         
-        
-        let bundle = NSBundle.mainBundle()
-        let path = bundle.pathForResource("MemoryData", ofType: "json")
-        let content = NSData(contentsOfFile: path!)! as NSData
-        
-        //println(content) // prints the content of data.txt
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(content, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-        defaults.setObject(json, forKey: "json")
-        
-        var memoryArray=json["result"] as! NSArray
-        
-        var locationOfMemories:[[Double]]=[]
-        var idx=0.0
-        for i in memoryArray{
-            //println(i)
-            locationOfMemories.append([(i["lat"] as! NSString).doubleValue, (i["lng"] as! NSString).doubleValue, idx])
-            //print(i["lat"] as! String+" ")
-            //println(i["lng"] as! String)
-            idx+=1
-        }
-        
-        locationOfMemories.sort(sorterForDistance)
-        defaults.setObject(locationOfMemories, forKey: "locationOfMemories")
-        //defaults.setObject(memoryArray, forKey: "memoryArray")
-        
-
-    }
+//        let bundle = NSBundle.mainBundle()
+//        let path = bundle.pathForResource("MemoryData", ofType: "json")
+//        let content = NSData(contentsOfFile: path!)! as NSData
+//        
+//        //println(content) // prints the content of data.txt
+//        
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        
+//        let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(content, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+//        defaults.setObject(json, forKey: "json")
+//        
+//        var memoryArray=json["result"] as! NSArray
+//        
+//        var locationOfMemories:[[Double]]=[]
+//        var idx=0.0
+//        for i in memoryArray{
+//            //println(i)
+//            locationOfMemories.append([(i["lat"] as! NSString).doubleValue, (i["lng"] as! NSString).doubleValue, idx])
+//            //print(i["lat"] as! String+" ")
+//            //println(i["lng"] as! String)
+//            idx+=1
+//        }
+//        
+//        locationOfMemories.sort(sorterForDistance)
+//        defaults.setObject(locationOfMemories, forKey: "locationOfMemories")
+//        //defaults.setObject(memoryArray, forKey: "memoryArray")
+//        
+//
+}
 
     @IBOutlet weak var slider: WKInterfaceSlider!
     //@IBOutlet weak var picker: WKInterfacePicker!
@@ -76,7 +79,36 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        self.titleLabel.setText("hi")
+        //self.titleLabel.setText("hi")
+//        let bundle = NSBundle.mainBundle()
+//        let path = bundle.pathForResource("MemoryData", ofType: "json")
+//        let content = NSData(contentsOfFile: path!)! as NSData
+//        
+//        println(content) // prints the content of data.txt
+        
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        
+//        let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(content, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+//        defaults.setObject(json, forKey: "json")
+//        
+//        var memoryArray=json["result"] as! NSArray
+//        
+//        var locationOfMemories:[[Double]]=[]
+//        var idx=0.0
+//        for i in memoryArray{
+//            //println(i)
+//            locationOfMemories.append([(i["lat"] as! NSString).doubleValue, (i["lng"] as! NSString).doubleValue, idx])
+//            //print(i["lat"] as! String+" ")
+//            //println(i["lng"] as! String)
+//            idx+=1
+//        }
+//        
+//        locationOfMemories.sort(sorterForDistance)
+//        defaults.setObject(locationOfMemories, forKey: "locationOfMemories")
+//        defaults.setObject(memoryArray, forKey: "memoryArray")
+        
+        
+        
     }
     
        

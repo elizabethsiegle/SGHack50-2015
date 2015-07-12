@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
@@ -8,16 +8,17 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="appleWatch2_WatchKit_App" customModuleProvider="target">
+                <controller contentMode="scaleAspectFit" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="appleWatch2_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="54" alignment="center" verticalAlignment="center" text="SGM" textAlignment="left" id="61l-O2-peT" userLabel="Title">
+                        <label alignment="center" verticalAlignment="center" text="SGMemories" textAlignment="left" id="61l-O2-peT" userLabel="Title" colorLabel="IBBuiltInLabel-Orange">
                             <color key="textColor" red="1" green="0.40922086093053078" blue="0.36209374523958882" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                     </items>
                     <color key="backgroundColor" red="0.18154361206446157" green="0.30962054432067942" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="titleLabel" destination="61l-O2-peT" id="Bnt-sX-rbh"/>
-                        <segue destination="yfZ-pX-VYu" kind="relationship" relationship="nextPage" id="lyu-MS-II2"/>
+                        <segue destination="zwv-ZV-jGS" kind="relationship" relationship="nextPage" id="7zV-3w-fCs"/>
                     </connections>
                 </controller>
             </objects>
@@ -35,24 +36,25 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="392" y="336"/>
+            <point key="canvasLocation" x="294" y="353"/>
         </scene>
         <!--Page3 Interface Controller-->
         <scene sceneID="yTx-oX-ZwY">
             <objects>
                 <controller id="zwv-ZV-jGS" customClass="page3InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Page 3" id="UHp-7D-7ST" userLabel="thirdLabel"/>
+                        <label alignment="left" text="Nearby memories" id="uWi-GS-WlG">
+                            <color key="textColor" red="0.45372817240000002" green="0.84313024179999996" blue="0.84538746840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
                         <map alignment="left" id="0vP-aE-JoU"/>
                     </items>
                     <connections>
-                        <outlet property="page3Label" destination="UHp-7D-7ST" id="zNd-23-gAr"/>
                         <outlet property="page3Map" destination="0vP-aE-JoU" id="CkX-4N-A63"/>
-                        <segue destination="8FS-u9-QVT" kind="relationship" relationship="nextPage" id="Whh-5B-CV3"/>
+                        <segue destination="yfZ-pX-VYu" kind="relationship" relationship="nextPage" id="Hxw-sG-66C"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="215" y="356"/>
+            <point key="canvasLocation" x="-77" y="336"/>
         </scene>
         <!--Page2 Interface Controller-->
         <scene sceneID="xUp-na-Nle">
@@ -65,11 +67,11 @@
                     </items>
                     <connections>
                         <outlet property="page2TitleLabel" destination="c7d-nM-59C" id="0LM-2x-jj3"/>
-                        <segue destination="zwv-ZV-jGS" kind="relationship" relationship="nextPage" id="9fD-H5-eKg"/>
+                        <segue destination="8FS-u9-QVT" kind="relationship" relationship="nextPage" id="yp8-ma-Utd"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-6" y="390.75"/>
+            <point key="canvasLocation" x="127" y="363.75"/>
         </scene>
     </scenes>
 </document>

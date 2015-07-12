@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import CoreLocation
 import MapKit
-
+import AVFoundation
 class ViewController: UIViewController {
     
     
@@ -48,6 +48,7 @@ class ViewController: UIViewController {
             annotation.coordinate = location
             annotation.title = i["title"] as! String
             mapView.addAnnotation(annotation)
+            AudioServicesPlaySystemSound(1005);
         }
     }
     

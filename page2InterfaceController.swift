@@ -14,9 +14,9 @@ class page2InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var page2TitleLabel: WKInterfaceLabel!
 
-    @IBOutlet weak var page2AuthorLabel: WKInterfaceLabel!
-    
-    @IBOutlet weak var page2TextLabel: WKInterfaceLabel!
+//    @IBOutlet weak var page2AuthorLabel: WKInterfaceLabel!
+//    
+//    @IBOutlet weak var page2TextLabel: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
