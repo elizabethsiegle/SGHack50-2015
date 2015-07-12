@@ -9,11 +9,11 @@
 import WatchKit
 import Foundation
 
-
+let userLocation=[1.35, 103.8]
 
 class InterfaceController: WKInterfaceController {
 
-    let userLocation=[1.35, 103.8]
+
     
     func getDistance(lat1: Double, lng1: Double, lat2: Double, lng2: Double) -> Double{
         var R=6371.0
