@@ -9,21 +9,34 @@
 import UIKit
 import Foundation
 import CoreLocation
+import MapKit
 
 class ViewController: UIViewController {
     
-
+    @IBOutlet weak var mapView: MKMapView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        // set initial location in Singapore
+        let initialLocation = CLLocation(latitude: 1.3000, longitude: 103.8000)
+        centerMapOnLocation(initialLocation)
+
+//        let manager = CLLocationManager()
+//        if CLLocationManager.locationServicesEnabled() {
+//            manager.startUpdatingLocation()
+//        }
+//        if CLLocationManager.authorizationStatus() == .NotDetermined {
+//            manager.requestAlwaysAuthorization()
+//        }
+        mapView.delegate = self
         
-        let manager = CLLocationManager()
-        if CLLocationManager.locationServicesEnabled() {
-            manager.startUpdatingLocation()
-        }
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
-            manager.requestAlwaysAuthorization()
-        }
-        
+    }
+    
+    let regionRadius: CLLocationDistance = 1000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
     func locationManager(manager: CLLocationManager!, didVisit visit: CLVisit!) {

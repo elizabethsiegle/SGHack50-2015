@@ -31,10 +31,15 @@ class page2InterfaceController: WKInterfaceController {
         memoryArray+=[memory1]
         memoryArray+=[memory2]
         
-        self.page2Label.setText(memoryArray[0]["text"])
-
+//        var memory: String
+//        for memory: String in memoryArray {
+//            self.page2Label.setText(memoryArray[memory]["text"])
+//        }
+//        var largest = 0
+//        for (kind)
+//    }
+//    
     }
-    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
