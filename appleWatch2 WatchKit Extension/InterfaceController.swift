@@ -19,13 +19,26 @@ class InterfaceController: WKInterfaceController {
     }
 
     
+    @IBOutlet weak var titleLabel: WKInterfaceLabel!
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-    }
-    //initialize array
+            }
+    
+    @IBOutlet weak var page1: WKInterfaceLabel!
+    func displayDataPage1() {
+        //initialize array
+        let memory1=["text":"apple"]
+        let memory2=["text":"banana"]
+        
+        var memoryArray:[Dictionary<String, String>]=[]
+        memoryArray+=[memory1]
+        memoryArray+=[memory2]
+        
+        self.titleLabel.setText(memoryArray[1]["text"])
 
+    }
    
 
     override func didDeactivate() {

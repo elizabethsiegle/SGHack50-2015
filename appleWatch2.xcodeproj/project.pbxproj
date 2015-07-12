@@ -22,6 +22,7 @@
 		4417C3041B51B1D500ABA4BF /* world-map.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4417C3031B51B1D500ABA4BF /* world-map.gif */; };
 		4417C3061B51B9EA00ABA4BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4417C3051B51B9EA00ABA4BF /* MapKit.framework */; };
 		4417C3081B51C69900ABA4BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4417C3071B51C69900ABA4BF /* CoreLocation.framework */; };
+		4417C30C1B51E71A00ABA4BF /* 11714257_10205890837562646_543902495_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4417C30B1B51E71A00ABA4BF /* 11714257_10205890837562646_543902495_n.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		4417C3031B51B1D500ABA4BF /* world-map.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "world-map.gif"; sourceTree = "<group>"; };
 		4417C3051B51B9EA00ABA4BF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4417C3071B51C69900ABA4BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4417C30B1B51E71A00ABA4BF /* 11714257_10205890837562646_543902495_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 11714257_10205890837562646_543902495_n.jpg; path = ../../../../../Downloads/11714257_10205890837562646_543902495_n.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				4417C2BF1B51A4CD00ABA4BF /* AppDelegate.swift */,
 				4417C2C11B51A4CD00ABA4BF /* ViewController.swift */,
+				4417C30B1B51E71A00ABA4BF /* 11714257_10205890837562646_543902495_n.jpg */,
 				4417C2C31B51A4CD00ABA4BF /* Main.storyboard */,
 				4417C2C61B51A4CD00ABA4BF /* Images.xcassets */,
 				4417C3031B51B1D500ABA4BF /* world-map.gif */,
@@ -340,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4417C30C1B51E71A00ABA4BF /* 11714257_10205890837562646_543902495_n.jpg in Resources */,
 				4417C3041B51B1D500ABA4BF /* world-map.gif in Resources */,
 				4417C2C51B51A4CD00ABA4BF /* Main.storyboard in Resources */,
 				4417C2CA1B51A4CD00ABA4BF /* LaunchScreen.xib in Resources */,
