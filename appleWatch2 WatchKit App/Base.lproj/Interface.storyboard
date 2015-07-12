@@ -17,7 +17,7 @@
                     <color key="backgroundColor" red="0.18154361206446157" green="0.30962054432067942" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="titleLabel" destination="61l-O2-peT" id="Bnt-sX-rbh"/>
-                        <segue destination="8FS-u9-QVT" kind="relationship" relationship="nextPage" id="RFb-TB-VnQ"/>
+                        <segue destination="yfZ-pX-VYu" kind="relationship" relationship="nextPage" id="lyu-MS-II2"/>
                     </connections>
                 </controller>
             </objects>
@@ -28,17 +28,14 @@
             <objects>
                 <controller id="8FS-u9-QVT" customClass="page1InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Page 1" id="cWj-vY-mHg" userLabel="firstLabel"/>
-                        <imageView width="99" height="71" alignment="left" id="fp2-ko-h6l"/>
+                        <imageView width="131" height="124" alignment="left" id="fp2-ko-h6l"/>
                     </items>
                     <connections>
                         <outlet property="page1Image" destination="fp2-ko-h6l" id="z7x-oB-cO1"/>
-                        <outlet property="page1Label" destination="cWj-vY-mHg" id="0C9-fG-bD7"/>
-                        <segue destination="yfZ-pX-VYu" kind="relationship" relationship="nextPage" id="qma-OG-cSy"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="8" y="478"/>
+            <point key="canvasLocation" x="392" y="336"/>
         </scene>
         <!--Page3 Interface Controller-->
         <scene sceneID="yTx-oX-ZwY">
@@ -46,32 +43,33 @@
                 <controller id="zwv-ZV-jGS" customClass="page3InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Page 3" id="UHp-7D-7ST" userLabel="thirdLabel"/>
-                        <map height="100" alignment="left" id="0vP-aE-JoU"/>
+                        <map alignment="left" id="0vP-aE-JoU"/>
                     </items>
                     <connections>
                         <outlet property="page3Label" destination="UHp-7D-7ST" id="zNd-23-gAr"/>
                         <outlet property="page3Map" destination="0vP-aE-JoU" id="CkX-4N-A63"/>
+                        <segue destination="8FS-u9-QVT" kind="relationship" relationship="nextPage" id="Whh-5B-CV3"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="383" y="503"/>
+            <point key="canvasLocation" x="215" y="356"/>
         </scene>
         <!--Page2 Interface Controller-->
         <scene sceneID="xUp-na-Nle">
             <objects>
                 <controller id="yfZ-pX-VYu" customClass="page2InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Page 2" numberOfLines="22" id="XFM-SQ-75W" userLabel="page2">
-                            <fontDescription key="font" type="system" pointSize="16"/>
+                        <label width="136" height="152.5" alignment="left" text="Page 2 Title" numberOfLines="5" id="c7d-nM-59C" userLabel="page2Title">
+                            <fontDescription key="font" type="system" pointSize="25"/>
                         </label>
                     </items>
                     <connections>
-                        <outlet property="page2Label" destination="XFM-SQ-75W" id="kvO-OR-d5K"/>
+                        <outlet property="page2TitleLabel" destination="c7d-nM-59C" id="0LM-2x-jj3"/>
                         <segue destination="zwv-ZV-jGS" kind="relationship" relationship="nextPage" id="9fD-H5-eKg"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="212" y="355"/>
+            <point key="canvasLocation" x="-6" y="390.75"/>
         </scene>
     </scenes>
 </document>

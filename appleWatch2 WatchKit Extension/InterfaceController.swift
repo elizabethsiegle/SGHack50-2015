@@ -62,9 +62,6 @@ class InterfaceController: WKInterfaceController {
         }
         
         locationOfMemories.sort(sorterForDistance)
-        for i in locationOfMemories{
-            println(i)
-        }
         defaults.setObject(locationOfMemories, forKey: "locationOfMemories")
         //defaults.setObject(memoryArray, forKey: "memoryArray")
         

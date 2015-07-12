@@ -25,6 +25,7 @@
 		4456F9321B521822004BA1AC /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9311B521822004BA1AC /* VCMapView.swift */; };
 		4456F9361B5221AD004BA1AC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9351B5221AD004BA1AC /* data.swift */; };
 		B4536FD01B523080009E86B9 /* MemoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = B4536FCF1B523080009E86B9 /* MemoryData.json */; };
+		B4A631C01B52858A00BABDBD /* MemoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = B4A631BF1B52858A00BABDBD /* MemoryData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +90,8 @@
 		4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page3InterfaceController.swift; path = ../page3InterfaceController.swift; sourceTree = "<group>"; };
 		4456F9311B521822004BA1AC /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		4456F9351B5221AD004BA1AC /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = data.swift; path = appleWatch2.xcodeproj/../data.swift; sourceTree = SOURCE_ROOT; };
-		B4536FCF1B523080009E86B9 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
+		B4536FCF1B523080009E86B9 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MemoryData.json; path = "appleWatch2 WatchKit Extension/MemoryData.json"; sourceTree = SOURCE_ROOT; };
+		B4A631BF1B52858A00BABDBD /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				4417C2BE1B51A4CD00ABA4BF /* Info.plist */,
+				B4A631BF1B52858A00BABDBD /* MemoryData.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A631C01B52858A00BABDBD /* MemoryData.json in Resources */,
 				4417C2C51B51A4CD00ABA4BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

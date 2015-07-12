@@ -18,8 +18,15 @@ class page1InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var imageURL=String()
+        if let temp = defaults.dictionaryForKey("json")
+        {
+            let jsonArray=temp["result"] as! NSArray
+            var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
+            
+        }
         
-        self.page1Label.setText("ayyy")
         let url = NSURL(string: "http://www.singaporememory.sg/thumbnails/contentFiles/140167?size=2")
         let data = NSData(contentsOfURL: url!)
         page1Image.setImage(UIImage(data: data!))

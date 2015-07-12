@@ -12,8 +12,11 @@ import Foundation
 
 class page2InterfaceController: WKInterfaceController {
     
-    @IBOutlet weak var page2Label: WKInterfaceLabel!
+    @IBOutlet weak var page2TitleLabel: WKInterfaceLabel!
 
+    @IBOutlet weak var page2AuthorLabel: WKInterfaceLabel!
+    
+    @IBOutlet weak var page2TextLabel: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -33,7 +36,8 @@ class page2InterfaceController: WKInterfaceController {
             let jsonArray=temp["result"] as! NSArray
             var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
             let closestMemoryIndex=Int(locationOfMemories[0][2])
-            self.page2Label.setText(jsonArray[closestMemoryIndex]["description"] as! String)
+            self.page2TitleLabel.setText(jsonArray[closestMemoryIndex]["title"] as! String)
+        
         }
 
     }

@@ -43,7 +43,6 @@ class page3InterfaceController: WKInterfaceController {
                 annotation.coordinate = location
                 annotation.title = "Roatan"
                 annotation.subtitle = "Honduras"
-                println(location.latitude)
                 self.page3Map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Red)
             }
 
