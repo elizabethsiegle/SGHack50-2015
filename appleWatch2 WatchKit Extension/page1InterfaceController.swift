@@ -21,7 +21,7 @@ class page1InterfaceController: WKInterfaceController {
         
         self.page1Label.setText("ayyy")
         let url = NSURL(string: "http://www.singaporememory.sg/thumbnails/contentFiles/140167?size=2")
-        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+        let data = NSData(contentsOfURL: url!)
         page1Image.setImage(UIImage(data: data!))
         // Configure interface objects here.
     }

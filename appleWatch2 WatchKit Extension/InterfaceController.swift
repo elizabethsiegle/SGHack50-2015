@@ -13,14 +13,29 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    let userLocation=[1.35, 103.8]
+    
     func getDistance(lat1: Double, lng1: Double, lat2: Double, lng2: Double) -> Double{
         var R=6371.0
         var x=(lng2-lng1) * cos(0.5*(lat2+lat1))
         var y=lat2-lat1
         return R*sqrt(x*x + y*y)
     }
+    
+    func sorterForDistance(this:[Double], that:[Double]) -> Bool {
+
+        let thisDistance=getDistance(userLocation[0], lng1: userLocation[1], lat2: this[0], lng2: this[1])
+        
+        let thatDistance=getDistance(userLocation[0], lng1: userLocation[1], lat2: that[0], lng2: that[1])
+        
+        return thisDistance < thatDistance
+    }
+
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        
         
         
         let bundle = NSBundle.mainBundle()
@@ -32,28 +47,28 @@ class InterfaceController: WKInterfaceController {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(content, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-        defaults.setObject(json, forKey: "userNameKey")
+        defaults.setObject(json, forKey: "json")
+        
         var memoryArray=json["result"] as! NSArray
+        
         var locationOfMemories:[[Double]]=[]
+        var idx=0.0
         for i in memoryArray{
             //println(i)
-            locationOfMemories.append([(i["lat"] as! NSString).doubleValue, (i["lng"] as! NSString).doubleValue])
+            locationOfMemories.append([(i["lat"] as! NSString).doubleValue, (i["lng"] as! NSString).doubleValue, idx])
             //print(i["lat"] as! String+" ")
             //println(i["lng"] as! String)
+            idx+=1
         }
-        var userLocation=[1.35, 103.8]
-        var minDistance=10000.0
-        var closestMemory=0
-        var cnt=0
-        for location in locationOfMemories{
-            var distance=getDistance(userLocation[0], lng1: userLocation[1], lat2:location[0], lng2:location[1])
-            if distance < minDistance{
-                minDistance=distance
-                closestMemory=cnt
-            }
-            cnt++
+        
+        locationOfMemories.sort(sorterForDistance)
+        for i in locationOfMemories{
+            println(i)
         }
-        defaults.setInteger(closestMemory, forKey: "closestMemory")
+        defaults.setObject(locationOfMemories, forKey: "locationOfMemories")
+        //defaults.setObject(memoryArray, forKey: "memoryArray")
+        
+
     }
 
     @IBOutlet weak var slider: WKInterfaceSlider!

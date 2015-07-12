@@ -28,11 +28,12 @@ class page2InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         let defaults = NSUserDefaults.standardUserDefaults()
-        if let temp = defaults.dictionaryForKey("userNameKey")
+        if let temp = defaults.dictionaryForKey("json")
         {
             let jsonArray=temp["result"] as! NSArray
-            let closestMemory=defaults.integerForKey("closestMemory")
-            self.page2Label.setText(jsonArray[closestMemory]["description"] as! String)
+            var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
+            let closestMemoryIndex=Int(locationOfMemories[0][2])
+            self.page2Label.setText(jsonArray[closestMemoryIndex]["description"] as! String)
         }
 
     }
