@@ -18,6 +18,13 @@ class page1InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+    }
+    
+
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
         let defaults = NSUserDefaults.standardUserDefaults()
         var imageURL=""
         if let temp = defaults.dictionaryForKey("json")
@@ -34,12 +41,6 @@ class page1InterfaceController: WKInterfaceController {
             let data = NSData(contentsOfURL: url!)
             page1Image.setImage(UIImage(data: data!))
         }// Configure interface objects here.
-    }
-    
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
         
     }
 

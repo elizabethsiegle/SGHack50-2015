@@ -43,7 +43,7 @@ class page3InterfaceController: WKInterfaceController {
 
             let jsonArray=temp["result"] as! NSArray
             var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
-            for i in locationOfMemories[0..<5]{
+            for i in locationOfMemories[0..<4]{
                 let curIndex=Int(i[2])
                 location = CLLocationCoordinate2D(
                     latitude: i[0],
