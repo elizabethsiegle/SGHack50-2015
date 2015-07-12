@@ -21,8 +21,12 @@ class page3InterfaceController: WKInterfaceController {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let name = defaults.dictionaryForKey("userNameKey")
         {
-            var temp=name["b"]! as! String
-            self.page3Label.setText(temp)
+            var test=name["result"] as! NSArray
+            for i in test{
+                var test2=i["lat"]
+                println(test2)
+
+            }
         }
         
         // Configure interface objects here.

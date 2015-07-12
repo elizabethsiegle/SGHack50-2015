@@ -25,6 +25,7 @@
 		4417C3161B51EC5400ABA4BF /* 11714257_10205890837562646_543902495_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4417C3151B51EC5400ABA4BF /* 11714257_10205890837562646_543902495_n.jpg */; };
 		444752071B520B07009DCCC3 /* page2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444752061B520B07009DCCC3 /* page2InterfaceController.swift */; };
 		4447520C1B520E26009DCCC3 /* page3InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */; };
+		B43BF0411B521EC400597567 /* MemoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = B43BF0401B521EC400597567 /* MemoryData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		4417C3151B51EC5400ABA4BF /* 11714257_10205890837562646_543902495_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 11714257_10205890837562646_543902495_n.jpg; path = Images.xcassets/11714257_10205890837562646_543902495_n.imageset/11714257_10205890837562646_543902495_n.jpg; sourceTree = "<group>"; };
 		444752061B520B07009DCCC3 /* page2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page2InterfaceController.swift; path = ../page2InterfaceController.swift; sourceTree = "<group>"; };
 		4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page3InterfaceController.swift; path = ../page3InterfaceController.swift; sourceTree = "<group>"; };
+		B43BF0401B521EC400597567 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				4417C2E61B51A58500ABA4BF /* Info.plist */,
+				B43BF0401B521EC400597567 /* MemoryData.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4417C2EE1B51A58500ABA4BF /* appleWatch2 WatchKit App.app in Resources */,
+				B43BF0411B521EC400597567 /* MemoryData.json in Resources */,
 				4417C2EA1B51A58500ABA4BF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

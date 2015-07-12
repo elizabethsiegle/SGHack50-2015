@@ -14,9 +14,18 @@ class InterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        
+        let bundle = NSBundle.mainBundle()
+        let path = bundle.pathForResource("MemoryData", ofType: "json")
+        let content = NSData(contentsOfFile: path!)! as NSData
+        
+        //println(content) // prints the content of data.txt
+        
         let defaults = NSUserDefaults.standardUserDefaults()
-        var dict=["a": "hello", "b": "bye"]
-        defaults.setObject(dict, forKey: "userNameKey")
+        
+        let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(content, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+        defaults.setObject(json, forKey: "userNameKey")
         // Configure interface objects here.
     }
 
