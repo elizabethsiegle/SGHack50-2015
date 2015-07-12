@@ -16,8 +16,13 @@
                         </label>
                         <group width="1" alignment="left" verticalAlignment="center" id="jv1-9Y-R06">
                             <items>
-                                <label alignment="right" verticalAlignment="bottom" text="Longitude" id="OZy-lQ-Uto"/>
-                                <label alignment="left" verticalAlignment="bottom" text="Latitude" textAlignment="left" id="M5X-SG-Xhf"/>
+                                <label alignment="left" verticalAlignment="bottom" text="Latitude" textAlignment="left" id="M5X-SG-Xhf">
+                                    <fontDescription key="font" type="italicSystem" weight="ultraLight" pointSize="13"/>
+                                </label>
+                                <label alignment="left" text="," id="ibJ-Y7-4gB"/>
+                                <label alignment="right" verticalAlignment="bottom" text="Longitude" id="OZy-lQ-Uto">
+                                    <fontDescription key="font" type="italicSystem" weight="ultraLight" pointSize="13"/>
+                                </label>
                             </items>
                         </group>
                     </items>
@@ -44,7 +49,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="294" y="353"/>
+            <point key="canvasLocation" x="262" y="245"/>
         </scene>
         <!--Page3 Interface Controller-->
         <scene sceneID="yTx-oX-ZwY">
@@ -70,9 +75,12 @@
                 <controller id="yfZ-pX-VYu" customClass="page2InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Page 2 Title" numberOfLines="5" id="c7d-nM-59C" userLabel="page2Title">
-                            <fontDescription key="font" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="italicSystem" weight="semibold" pointSize="20"/>
                         </label>
-                        <label alignment="left" text="Label" numberOfLines="20" minimumScaleFactor="0.0" id="DGb-oY-ca7"/>
+                        <label alignment="left" text="Label" numberOfLines="20" minimumScaleFactor="0.0" id="DGb-oY-ca7">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="16"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="memoryLabel" destination="DGb-oY-ca7" id="Dhm-6S-uu9"/>
