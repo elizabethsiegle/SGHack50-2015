@@ -32,12 +32,11 @@ def getMediaContent(elem):
     if child.tag == media_content:
       url = child.attrib['url']
       media_type = child.attrib['type']
-      media_thumbnail = getElementName(namespace_media, 'thumbnail')
-      thumbnail = child.find(media_thumbnail).attrib['url']
+      media_thumbnail = child.find(getElementName(namespace_media, 'thumbnail'))
+      thumbnail = media_thumbnail.attrib['url']
 
       new_content['url'] = url
       new_content['media_type'] = media_type
-      new_content['media_thumbnail'] = media_thumbnail
       new_content['thumbnail'] = thumbnail
   return new_content
 
@@ -97,3 +96,4 @@ for child in channel:
 
 data['result'] = item_array
 json_data = json.dumps(data)
+print json_data
