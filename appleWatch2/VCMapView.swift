@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Elizabeth Siegle. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 import MapKit
 
 extension ViewController: MKMapViewDelegate {
@@ -30,5 +30,11 @@ extension ViewController: MKMapViewDelegate {
             return view
         }
         return nil
+    }
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!,
+        calloutAccessoryControlTapped control: UIControl!) {
+            let location = view.annotation as! data
+            let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+            location.mapItem().openInMapsWithLaunchOptions(launchOptions)
     }
 }

@@ -89,7 +89,11 @@
 		4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page3InterfaceController.swift; path = ../page3InterfaceController.swift; sourceTree = "<group>"; };
 		4456F9311B521822004BA1AC /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		4456F9351B5221AD004BA1AC /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = data.swift; path = appleWatch2.xcodeproj/../data.swift; sourceTree = SOURCE_ROOT; };
+<<<<<<< HEAD
 		B4536FCF1B523080009E86B9 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
+=======
+		B43BF0401B521EC400597567 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
+>>>>>>> map pin
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

@@ -19,15 +19,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // set initial location in Singapore
         let initialLocation = CLLocation(latitude: 1.3000, longitude: 103.8000)
-        centerMapOnLocation(initialLocation)
-
-        mapView.delegate = self
         
+        let regionRadius: CLLocationDistance = 1000
+        func centerMapOnLocation(location: CLLocation) {
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                regionRadius * 2.0, regionRadius * 2.0)
+            mapView.setRegion(coordinateRegion, animated: true)
+            
+        }
+        centerMapOnLocation(initialLocation)
+        mapView.delegate = self
         let data1 = data(description1: "This is a video of the bicycle kick by V Sundramoorthy for Singapore against Brunei in a Malaysia Cup tie in 1993. This is widely considered as the greatest goal ever scored at the National Stadium.",
             pubDate: "Mon, 26 Mar 2012 18:11:06 +0800",
             author: "Wee Pin wan",
             media: "http://mstream.nlb.gov.sg:80/nlbvod/_definst_/SM/content/SMA-8e82/SMA-8e826aaa-d1ad-4fc5-a031-68820a2a700b/SMA-8e826aaa-d1ad-4fc5-a031-68820a2a700b-F1-preview.mp4/playlist.m3u8",
                 coordinate: CLLocationCoordinate2D(latitude: 1.3047139, longitude: 103.8745279))
+        
         mapView.addAnnotation(data1)
         
     }
