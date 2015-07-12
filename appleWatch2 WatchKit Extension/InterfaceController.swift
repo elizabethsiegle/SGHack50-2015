@@ -9,32 +9,28 @@
 import WatchKit
 import Foundation
 
-let userLocation=[1.283905, 103.853649]
+var userLocation=[1.283905, 103.853649]
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var latSliderLabel: WKInterfaceLabel!
 
-    @IBOutlet weak var page1lat: WKInterfaceLabel!
-    
-    @IBOutlet weak var page1long: WKInterfaceLabel!
-    func getDistance(lat1: Double, lng1: Double, lat2: Double, lng2: Double) -> Double{
-        var R=6371.0
-        var x=(lng2-lng1) * cos(0.5*(lat2+lat1))
-        var y=lat2-lat1
-        var distance = R*sqrt(x*x + y*y)
-        return distance
+    @IBAction func latSlider(value: Float) {
+        self.latSliderLabel.setText(value.description)
+        userLocation[0]=Double(value)
     }
-    
-    
-    
-    
-    func sorterForDistance(this:[Double], that:[Double]) -> Bool {
-        let thisDistance=getDistance(userLocation[0], lng1: userLocation[1], lat2: this[0], lng2: this[1])
-        
-        let thatDistance=getDistance(userLocation[0], lng1: userLocation[1], lat2: that[0], lng2: that[1])
-        
-        return thisDistance < thatDistance
+    @IBOutlet weak var longSliderLabel: WKInterfaceLabel!
+
+    @IBAction func longSlider(value: Float) {
+        self.longSliderLabel.setText(value.description)
+        userLocation[1]=Double(value)
     }
+
+    
+    
+    
+    
+
 
     
     override func awakeWithContext(context: AnyObject?) {
@@ -42,38 +38,11 @@ class InterfaceController: WKInterfaceController {
         
         
         
-        let bundle = NSBundle.mainBundle()
-        let path = bundle.pathForResource("MemoryData", ofType: "json")
-        let content = NSData(contentsOfFile: path!)! as NSData
-        
-        //println(content) // prints the content of data.txt
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(content, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-        defaults.setObject(json, forKey: "json")
-        
-        var memoryArray=json["result"] as! NSArray
-        
-        var locationOfMemories:[[Double]]=[]
-        var idx=0.0
-        for i in memoryArray{
-            //println(i)
-            locationOfMemories.append([(i["lat"] as! NSString).doubleValue, (i["lng"] as! NSString).doubleValue, idx])
-            //print(i["lat"] as! String+" ")
-            //println(i["lng"] as! String)
-            idx+=1
-        }
-        
-        locationOfMemories.sort(sorterForDistance)
-        defaults.setObject(locationOfMemories, forKey: "locationOfMemories")
         //defaults.setObject(memoryArray, forKey: "memoryArray")
         
 
 }
 
-    @IBOutlet weak var slider: WKInterfaceSlider!
-    //@IBOutlet weak var picker: WKInterfacePicker!
     
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
 
@@ -88,8 +57,6 @@ class InterfaceController: WKInterfaceController {
             var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
             let closestMemoryIndex=Int(locationOfMemories[0][2])
 
-            self.page1lat.setText(jsonArray[closestMemoryIndex]["lat"] as? String)
-            self.page1long.setText(jsonArray[closestMemoryIndex]["lng"] as? String)
         }
 //        let bundle = NSBundle.mainBundle()
 //        let path = bundle.pathForResource("MemoryData", ofType: "json")
