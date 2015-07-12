@@ -62,11 +62,11 @@ namespace_georss= "{http://www.georss.org/georss}"
 data = {}
 item_array = []
 
-manual_lookup_latlng = [(1.301215, 103.883686),
-                        (1.283905, 103.853649),
-                        (1.422496, 103.828156),
-                        (1.326521, 103.803812),
-                        (1.282792, 103.851505),
+manual_lookup_latlng = [("1.301215", "103.883686"),
+                        ("1.283905", "103.853649"),
+                        ("1.422496", "103.828156"),
+                        ("1.326521", "103.803812"),
+                        ("1.282792", "103.851505"),
                        ]
 missing_count = 0;
 
@@ -74,6 +74,7 @@ for child in channel:
   if child.tag == 'item':
     new_item = {}
     link = child.find('link')
+    title = child.find('title')
     description = child.find('description')
     pubDate = child.find('pubDate')
     author = child.find('Author')
@@ -85,6 +86,7 @@ for child in channel:
       missing_count += 1
 
     new_item['link'] = link.text
+    new_item['title'] = title.text
     new_item['description'] = description.text
     new_item['pubDate'] = pubDate.text
     new_item['author'] = author.text
