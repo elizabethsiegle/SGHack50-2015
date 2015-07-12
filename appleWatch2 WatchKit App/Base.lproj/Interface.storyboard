@@ -10,27 +10,38 @@
             <objects>
                 <controller contentMode="scaleAspectFit" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="appleWatch2_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="SGMemories" textAlignment="left" id="61l-O2-peT" userLabel="Title" colorLabel="IBBuiltInLabel-Orange">
+                        <label alignment="center" text="SGMemories" textAlignment="left" id="61l-O2-peT" userLabel="Title" colorLabel="IBBuiltInLabel-Orange">
                             <color key="textColor" red="1" green="0.40922086093053078" blue="0.36209374523958882" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <group width="1" alignment="left" verticalAlignment="center" id="jv1-9Y-R06">
-                            <items>
-                                <label alignment="right" verticalAlignment="bottom" text="Longitude" id="OZy-lQ-Uto"/>
-                                <label alignment="left" verticalAlignment="bottom" text="Latitude" textAlignment="left" id="M5X-SG-Xhf"/>
-                            </items>
-                        </group>
+                        <label width="125.5" alignment="left" text="Latitude" id="dG0-qW-AU6" userLabel="latSliderLabel"/>
+                        <slider width="1" alignment="left" value="1.3500000000000001" minimum="1.25" maximum="1.45" steps="10" id="cfJ-Z1-Hx8">
+                            <connections>
+                                <action selector="latSlider:" destination="AgC-eL-Hgc" id="BVB-Jh-ejV"/>
+                            </connections>
+                        </slider>
+                        <label alignment="left" text="Longtitude" id="NHW-OZ-uVO" userLabel="longSliderLabel"/>
+                        <slider width="1" alignment="left" value="103.8" minimum="103.7" maximum="103.90000000000001" steps="10" id="L8A-fZ-lDb">
+                            <connections>
+                                <action selector="longSlider:" destination="AgC-eL-Hgc" id="ore-OZ-Myg"/>
+                            </connections>
+                        </slider>
                     </items>
+                    <menu key="menu" id="AO8-Q5-wox">
+                        <items>
+                            <menuItem title="Menu Item" id="83U-Yw-XpM"/>
+                        </items>
+                    </menu>
                     <color key="backgroundColor" red="0.0053210224389211025" green="0.0092589402532965263" blue="0.029632260101010055" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <outlet property="page1lat" destination="M5X-SG-Xhf" id="cgK-tR-stR"/>
-                        <outlet property="page1long" destination="OZy-lQ-Uto" id="rPQ-sA-Dvp"/>
+                        <outlet property="latSliderLabel" destination="dG0-qW-AU6" id="Hto-G3-Zfm"/>
+                        <outlet property="longSliderLabel" destination="NHW-OZ-uVO" id="Qtj-nx-m1Z"/>
                         <outlet property="titleLabel" destination="61l-O2-peT" id="Bnt-sX-rbh"/>
                         <segue destination="zwv-ZV-jGS" kind="relationship" relationship="nextPage" id="7zV-3w-fCs"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-1" y="145"/>
+            <point key="canvasLocation" x="-196" y="114"/>
         </scene>
         <!--Page1 Interface Controller-->
         <scene sceneID="4Gh-R8-kKS">
@@ -44,7 +55,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="294" y="353"/>
+            <point key="canvasLocation" x="370" y="388"/>
         </scene>
         <!--Page3 Interface Controller-->
         <scene sceneID="yTx-oX-ZwY">

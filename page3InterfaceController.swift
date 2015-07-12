@@ -19,7 +19,54 @@ class page3InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+
+        // Configure interface objects here.
+    }
+    
+    func getDistance(lat1: Double, lng1: Double, lat2: Double, lng2: Double) -> Double{
+        var R=6371.0
+        var x=(lng2-lng1) * cos(0.5*(lat2+lat1))
+        var y=lat2-lat1
+        var distance = R*sqrt(x*x + y*y)
+        return distance
+    }
+    
+    func sorterForDistance(this:[Double], that:[Double]) -> Bool {
+        let thisDistance=getDistance(userLocation[0], lng1: userLocation[1], lat2: this[0], lng2: this[1])
+        
+        let thatDistance=getDistance(userLocation[0], lng1: userLocation[1], lat2: that[0], lng2: that[1])
+        
+        return thisDistance < thatDistance
+    }
+    
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
         let defaults = NSUserDefaults.standardUserDefaults()
+        let bundle = NSBundle.mainBundle()
+        let path = bundle.pathForResource("MemoryData", ofType: "json")
+        let content = NSData(contentsOfFile: path!)! as NSData
+        
+        //println(content) // prints the content of data.txt
+        
+        
+        let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(content, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+        defaults.setObject(json, forKey: "json")
+        
+        var memoryArray=json["result"] as! NSArray
+        
+        var locationOfMemories:[[Double]]=[]
+        var idx=0.0
+        for i in memoryArray{
+            //println(i)
+            locationOfMemories.append([(i["lat"] as! NSString).doubleValue, (i["lng"] as! NSString).doubleValue, idx])
+            //print(i["lat"] as! String+" ")
+            //println(i["lng"] as! String)
+            idx+=1
+        }
+        
+        locationOfMemories.sort(sorterForDistance)
+        defaults.setObject(locationOfMemories, forKey: "locationOfMemories")
         var location = CLLocationCoordinate2D(
             latitude: userLocation[0],
             longitude: userLocation[1]
@@ -40,7 +87,7 @@ class page3InterfaceController: WKInterfaceController {
                 //self.page3TWKInterfaceImage.setImage(jsonArray[closestMemoryIndex]["media"] as! String)
                 
             }
-
+            
             let jsonArray=temp["result"] as! NSArray
             var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
             for i in locationOfMemories[0..<4]{
@@ -57,15 +104,8 @@ class page3InterfaceController: WKInterfaceController {
             }
         }
         
-       self.page3Map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Purple)
+        self.page3Map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Purple)
         
-        // Configure interface objects here.
-    }
-    
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-
         
     }
     
