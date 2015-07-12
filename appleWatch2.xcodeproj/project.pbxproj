@@ -24,6 +24,7 @@
 		4447520C1B520E26009DCCC3 /* page3InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */; };
 		4456F9321B521822004BA1AC /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9311B521822004BA1AC /* VCMapView.swift */; };
 		4456F9361B5221AD004BA1AC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9351B5221AD004BA1AC /* data.swift */; };
+		B43BF0411B521EC400597567 /* MemoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = B43BF0401B521EC400597567 /* MemoryData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page3InterfaceController.swift; path = ../page3InterfaceController.swift; sourceTree = "<group>"; };
 		4456F9311B521822004BA1AC /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		4456F9351B5221AD004BA1AC /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = data.swift; path = appleWatch2.xcodeproj/../data.swift; sourceTree = SOURCE_ROOT; };
+		B43BF0401B521EC400597567 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
