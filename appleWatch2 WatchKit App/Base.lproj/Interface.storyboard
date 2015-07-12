@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
@@ -23,14 +23,15 @@
             </objects>
             <point key="canvasLocation" x="-1" y="145"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Page1 Interface Controller-->
         <scene sceneID="4Gh-R8-kKS">
             <objects>
-                <controller id="8FS-u9-QVT">
+                <controller id="8FS-u9-QVT" customClass="page1InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Page 1" id="cWj-vY-mHg"/>
                     </items>
                     <connections>
+                        <outlet property="page1Label" destination="cWj-vY-mHg" id="0C9-fG-bD7"/>
                         <segue destination="yfZ-pX-VYu" kind="relationship" relationship="nextPage" id="qma-OG-cSy"/>
                     </connections>
                 </controller>
@@ -46,7 +47,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="309" y="445"/>
+            <point key="canvasLocation" x="410" y="444"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="xUp-na-Nle">

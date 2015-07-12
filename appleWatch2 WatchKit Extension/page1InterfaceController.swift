@@ -17,10 +17,12 @@ class page1InterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
     }
+    @IBOutlet weak var page1Label: WKInterfaceLabel!
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        self.page1Label.setText("ayyy")
     }
 
     override func didDeactivate() {
