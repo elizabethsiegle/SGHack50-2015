@@ -29,8 +29,10 @@
                 <controller id="8FS-u9-QVT" customClass="page1InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Page 1" id="cWj-vY-mHg" userLabel="firstLabel"/>
+                        <imageView width="99" height="71" alignment="left" id="fp2-ko-h6l"/>
                     </items>
                     <connections>
+                        <outlet property="page1Image" destination="fp2-ko-h6l" id="z7x-oB-cO1"/>
                         <outlet property="page1Label" destination="cWj-vY-mHg" id="0C9-fG-bD7"/>
                         <segue destination="yfZ-pX-VYu" kind="relationship" relationship="nextPage" id="qma-OG-cSy"/>
                     </connections>
@@ -59,7 +61,9 @@
             <objects>
                 <controller id="yfZ-pX-VYu" customClass="page2InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Page 2" id="XFM-SQ-75W" userLabel="page2"/>
+                        <label alignment="left" text="Page 2" numberOfLines="22" id="XFM-SQ-75W" userLabel="page2">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="page2Label" destination="XFM-SQ-75W" id="kvO-OR-d5K"/>

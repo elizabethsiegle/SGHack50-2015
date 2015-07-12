@@ -17,13 +17,7 @@ class page2InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if let temp = defaults.dictionaryForKey("userNameKey")
-        {
-            let jsonArray=temp["result"] as! NSArray
-            let closestMemory=defaults.integerForKey("closestMemory")
-            self.page2Label.setText(jsonArray[closestMemory]["description"] as! String)
-        }
+        
         
         
         // Configure interface objects here.
@@ -33,6 +27,13 @@ class page2InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let temp = defaults.dictionaryForKey("userNameKey")
+        {
+            let jsonArray=temp["result"] as! NSArray
+            let closestMemory=defaults.integerForKey("closestMemory")
+            self.page2Label.setText(jsonArray[closestMemory]["description"] as! String)
+        }
 
     }
     override func didDeactivate() {
