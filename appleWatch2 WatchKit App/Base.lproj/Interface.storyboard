@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="appleWatch2_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="54" alignment="center" verticalAlignment="center" text="Title" textAlignment="left" id="61l-O2-peT" userLabel="Title">
+                        <label width="54" alignment="center" verticalAlignment="center" text="SGM" textAlignment="left" id="61l-O2-peT" userLabel="Title">
                             <color key="textColor" red="1" green="0.40922086093053078" blue="0.36209374523958882" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                     </items>

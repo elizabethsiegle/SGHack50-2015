@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,16 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eJ2-de-Ta8">
-                                <rect key="frame" x="26" y="-20" width="500" height="500"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eJ2-de-Ta8">
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="eJ2-de-Ta8" secondAttribute="trailing" constant="-6" id="Yyz-MS-WFu"/>
+                            <constraint firstItem="eJ2-de-Ta8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="gTd-2R-vEZ"/>
+                            <constraint firstItem="eJ2-de-Ta8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-26" id="vQP-91-MB7"/>
+                            <constraint firstItem="eJ2-de-Ta8" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="xZA-Wg-Dwl"/>
+                        </constraints>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="100" height="375"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="500" height="500"/>
+                    <connections>
+                        <outlet property="mapView" destination="eJ2-de-Ta8" id="E2X-hO-eJ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
