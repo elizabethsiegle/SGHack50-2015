@@ -26,7 +26,14 @@ class InterfaceController: WKInterfaceController {
         
         let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(content, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
         defaults.setObject(json, forKey: "userNameKey")
-        // Configure interface objects here.
+        var memoryArray=json["result"] as! NSArray
+        var locations:[[Double]]=[]
+        for i in memoryArray{
+            //println(i)
+            locations.append([(i["lat"] as! NSString).doubleValue, (i["lat"] as! NSString).doubleValue])
+            //print(i["lat"] as! String+" ")
+            //println(i["lng"] as! String)
+        }
     }
 
     @IBOutlet weak var slider: WKInterfaceSlider!

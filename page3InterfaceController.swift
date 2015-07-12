@@ -24,7 +24,7 @@ class page3InterfaceController: WKInterfaceController {
             var test=name["result"] as! NSArray
             for i in test{
                 var test2=i["lat"]
-                println(test2)
+                //println(test2)
 
             }
         }

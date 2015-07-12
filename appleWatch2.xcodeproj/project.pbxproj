@@ -24,6 +24,7 @@
 		4447520C1B520E26009DCCC3 /* page3InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */; };
 		4456F9321B521822004BA1AC /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9311B521822004BA1AC /* VCMapView.swift */; };
 		4456F9361B5221AD004BA1AC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9351B5221AD004BA1AC /* data.swift */; };
+		B4536FD01B523080009E86B9 /* MemoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = B4536FCF1B523080009E86B9 /* MemoryData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page3InterfaceController.swift; path = ../page3InterfaceController.swift; sourceTree = "<group>"; };
 		4456F9311B521822004BA1AC /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		4456F9351B5221AD004BA1AC /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = data.swift; path = appleWatch2.xcodeproj/../data.swift; sourceTree = SOURCE_ROOT; };
+		B4536FCF1B523080009E86B9 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,8 +197,8 @@
 		4417C2E51B51A58500ABA4BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4536FCF1B523080009E86B9 /* MemoryData.json */,
 				4417C2E61B51A58500ABA4BF /* Info.plist */,
-				B43BF0401B521EC400597567 /* MemoryData.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -363,7 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4417C2EE1B51A58500ABA4BF /* appleWatch2 WatchKit App.app in Resources */,
-				B43BF0411B521EC400597567 /* MemoryData.json in Resources */,
+				B4536FD01B523080009E86B9 /* MemoryData.json in Resources */,
 				4417C2EA1B51A58500ABA4BF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
