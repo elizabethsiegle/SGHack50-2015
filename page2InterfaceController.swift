@@ -32,6 +32,7 @@ class page2InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        println(userLocation)
         let defaults = NSUserDefaults.standardUserDefaults()
         if let temp = defaults.dictionaryForKey("json")
         {

@@ -26,7 +26,7 @@
                             </items>
                         </group>
                         <label width="125.5" alignment="left" text="Latitude" id="dG0-qW-AU6" userLabel="latSliderLabel"/>
-                        <slider width="1" alignment="left" value="1.3500000000000001" minimum="1.25" maximum="1.45" steps="10" id="cfJ-Z1-Hx8">
+                        <slider width="1" alignment="left" value="1.3500000000000001" minimum="1.3" maximum="1.3999999999999999" steps="10" id="cfJ-Z1-Hx8">
                             <connections>
                                 <action selector="latSlider:" destination="AgC-eL-Hgc" id="BVB-Jh-ejV"/>
                             </connections>
@@ -59,14 +59,19 @@
             <objects>
                 <controller id="8FS-u9-QVT" customClass="page1InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
+                        <label alignment="left" id="chg-GZ-aNp">
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                        </label>
                         <imageView width="131" height="124" alignment="left" id="fp2-ko-h6l"/>
+                        <label alignment="left" id="IiX-zg-1sq"/>
                     </items>
                     <connections>
                         <outlet property="page1Image" destination="fp2-ko-h6l" id="z7x-oB-cO1"/>
+                        <outlet property="page1Label" destination="chg-GZ-aNp" id="4T8-83-oVQ"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="370" y="388"/>
+            <point key="canvasLocation" x="389" y="373"/>
         </scene>
         <!--Page3 Interface Controller-->
         <scene sceneID="yTx-oX-ZwY">
