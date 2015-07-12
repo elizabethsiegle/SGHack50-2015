@@ -10,57 +10,54 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="appleWatch2_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="54" alignment="center" verticalAlignment="center" text="Title" textAlignment="left" id="61l-O2-peT" userLabel="Title">
+                        <label width="54" alignment="center" verticalAlignment="center" text="SG" textAlignment="left" id="61l-O2-peT" userLabel="Title">
                             <color key="textColor" red="1" green="0.40922086093053078" blue="0.36209374523958882" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                     </items>
                     <color key="backgroundColor" red="0.18154361206446157" green="0.30962054432067942" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="titleLabel" destination="61l-O2-peT" id="Bnt-sX-rbh"/>
-                        <segue destination="8FS-u9-QVT" kind="relationship" relationship="nextPage" id="RFb-TB-VnQ"/>
+                        <segue destination="gou-nK-gXT" kind="relationship" relationship="nextPage" id="yPZ-xS-yrR"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-1" y="145"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="4Gh-R8-kKS">
+        <!--page1-->
+        <scene sceneID="xUj-ll-13f">
             <objects>
-                <controller id="8FS-u9-QVT">
-                    <items>
-                        <label alignment="left" text="Page 1" id="cWj-vY-mHg"/>
-                    </items>
+                <controller identifier="page1" id="gou-nK-gXT">
+                    <color key="backgroundColor" red="1" green="0.30708479039999997" blue="0.91672799429999996" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <segue destination="yfZ-pX-VYu" kind="relationship" relationship="nextPage" id="qma-OG-cSy"/>
+                        <segue destination="niM-Hg-u8w" kind="relationship" relationship="nextPage" id="kzZ-xG-LVV"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="8" y="478"/>
+            <point key="canvasLocation" x="-119" y="409"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="yTx-oX-ZwY">
+        <!--page2-->
+        <scene sceneID="d82-Pj-aPA">
             <objects>
-                <controller id="zwv-ZV-jGS">
-                    <items>
-                        <label alignment="left" text="Page 3" id="UHp-7D-7ST"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="309" y="445"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="xUp-na-Nle">
-            <objects>
-                <controller id="yfZ-pX-VYu">
-                    <items>
-                        <label alignment="left" text="Page 2" id="XFM-SQ-75W"/>
-                    </items>
+                <controller identifier="page2" id="niM-Hg-u8w">
+                    <color key="backgroundColor" red="1" green="0.87112628160000005" blue="0.97091932020000005" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <segue destination="zwv-ZV-jGS" kind="relationship" relationship="nextPage" id="9fD-H5-eKg"/>
+                        <segue destination="i2M-mL-lx0" kind="relationship" relationship="nextPage" id="vmJ-qv-h0s"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="173" y="435"/>
+            <point key="canvasLocation" x="66" y="413"/>
+        </scene>
+        <!--page3-->
+        <scene sceneID="Hk1-Fh-PrU">
+            <objects>
+                <controller identifier="page3" id="i2M-mL-lx0">
+                    <items>
+                        <label alignment="left" id="6AI-Gf-RMM"/>
+                    </items>
+                    <color key="backgroundColor" red="0.45372817240000002" green="0.84313024179999996" blue="0.84538746840000001" alpha="1" colorSpace="calibratedRGB"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="232" y="406"/>
         </scene>
     </scenes>
 </document>
