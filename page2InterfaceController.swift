@@ -23,22 +23,7 @@ class page2InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        //initialize array
-        let memory1=["text":"apple"]
-        let memory2=["text":"banana"]
-        
-        var memoryArray:[Dictionary<String, String>]=[]
-        memoryArray+=[memory1]
-        memoryArray+=[memory2]
-        
-//        var memory: String
-//        for memory: String in memoryArray {
-//            self.page2Label.setText(memoryArray[memory]["text"])
-//        }
-//        var largest = 0
-//        for (kind)
-//    }
-//    
+
     }
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
