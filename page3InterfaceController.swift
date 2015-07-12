@@ -21,8 +21,8 @@ class page3InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         let defaults = NSUserDefaults.standardUserDefaults()
         var location = CLLocationCoordinate2D(
-            latitude: 1.35,
-            longitude: 103.8
+            latitude: userLocation[0],
+            longitude: userLocation[1]
         )
         var span = MKCoordinateSpanMake(0.2, 0.2)
         var region = MKCoordinateRegion(center: location, span: span)
@@ -45,11 +45,9 @@ class page3InterfaceController: WKInterfaceController {
                 annotation.subtitle = "Honduras"
                 self.page3Map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Red)
             }
-
         }
         
-       
-        //self.page3Map.addAnnotatio
+       self.page3Map.addAnnotation(location, withPinColor: WKInterfaceMapPinColor.Purple)
         
         // Configure interface objects here.
     }

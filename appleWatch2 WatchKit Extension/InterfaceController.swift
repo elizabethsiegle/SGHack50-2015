@@ -9,7 +9,7 @@
 import WatchKit
 import Foundation
 
-let userLocation=[1.326, 103.72]
+let userLocation=[1.28, 103.85]
 
 class InterfaceController: WKInterfaceController {
 
