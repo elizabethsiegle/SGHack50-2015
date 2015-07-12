@@ -22,7 +22,7 @@ class page2InterfaceController: WKInterfaceController {
         {
             let jsonArray=temp["result"] as! NSArray
             let closestMemory=defaults.integerForKey("closestMemory")
-            self.page2Label.setText(jsonArray[closestMemory]["description"] as! String)
+            //self.page2Label.setText(jsonArray[closestMemory]["description"] as! String)
         }
         
         

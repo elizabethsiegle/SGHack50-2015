@@ -23,8 +23,9 @@
 		444752071B520B07009DCCC3 /* page2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444752061B520B07009DCCC3 /* page2InterfaceController.swift */; };
 		4447520C1B520E26009DCCC3 /* page3InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */; };
 		4456F9321B521822004BA1AC /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9311B521822004BA1AC /* VCMapView.swift */; };
-		4456F9361B5221AD004BA1AC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9351B5221AD004BA1AC /* data.swift */; };
-		B43BF0411B521EC400597567 /* MemoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = B43BF0401B521EC400597567 /* MemoryData.json */; };
+		4456F9361B5221AD004BA1AC /* (null) in Sources */ = {isa = PBXBuildFile; };
+		4456F9381B523F83004BA1AC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9371B523F83004BA1AC /* data.swift */; };
+		B4536FD01B523080009E86B9 /* MemoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = B4536FCF1B523080009E86B9 /* MemoryData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +89,8 @@
 		444752061B520B07009DCCC3 /* page2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page2InterfaceController.swift; path = ../page2InterfaceController.swift; sourceTree = "<group>"; };
 		4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page3InterfaceController.swift; path = ../page3InterfaceController.swift; sourceTree = "<group>"; };
 		4456F9311B521822004BA1AC /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
-		4456F9351B5221AD004BA1AC /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = data.swift; path = appleWatch2.xcodeproj/../data.swift; sourceTree = SOURCE_ROOT; };
-		B43BF0401B521EC400597567 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
+		4456F9371B523F83004BA1AC /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		B4536FCF1B523080009E86B9 /* MemoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +149,7 @@
 			children = (
 				4417C2BF1B51A4CD00ABA4BF /* AppDelegate.swift */,
 				4417C2C11B51A4CD00ABA4BF /* ViewController.swift */,
-				4456F9351B5221AD004BA1AC /* data.swift */,
+				4456F9371B523F83004BA1AC /* data.swift */,
 				4456F9311B521822004BA1AC /* VCMapView.swift */,
 				4417C2C31B51A4CD00ABA4BF /* Main.storyboard */,
 				4417C2BD1B51A4CD00ABA4BF /* Supporting Files */,
@@ -389,7 +390,8 @@
 				4456F9321B521822004BA1AC /* VCMapView.swift in Sources */,
 				4417C2C21B51A4CD00ABA4BF /* ViewController.swift in Sources */,
 				4417C2C01B51A4CD00ABA4BF /* AppDelegate.swift in Sources */,
-				4456F9361B5221AD004BA1AC /* data.swift in Sources */,
+				4456F9381B523F83004BA1AC /* data.swift in Sources */,
+				4456F9361B5221AD004BA1AC /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
