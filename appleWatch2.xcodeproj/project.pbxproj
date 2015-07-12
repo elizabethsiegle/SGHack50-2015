@@ -23,6 +23,7 @@
 		444752071B520B07009DCCC3 /* page2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444752061B520B07009DCCC3 /* page2InterfaceController.swift */; };
 		4447520C1B520E26009DCCC3 /* page3InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */; };
 		4456F9321B521822004BA1AC /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9311B521822004BA1AC /* VCMapView.swift */; };
+		4456F9361B5221AD004BA1AC /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F9351B5221AD004BA1AC /* data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		444752061B520B07009DCCC3 /* page2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page2InterfaceController.swift; path = ../page2InterfaceController.swift; sourceTree = "<group>"; };
 		4447520A1B520DEB009DCCC3 /* page3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = page3InterfaceController.swift; path = ../page3InterfaceController.swift; sourceTree = "<group>"; };
 		4456F9311B521822004BA1AC /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		4456F9351B5221AD004BA1AC /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = data.swift; path = appleWatch2.xcodeproj/../data.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				4417C2BF1B51A4CD00ABA4BF /* AppDelegate.swift */,
 				4417C2C11B51A4CD00ABA4BF /* ViewController.swift */,
+				4456F9351B5221AD004BA1AC /* data.swift */,
 				4456F9311B521822004BA1AC /* VCMapView.swift */,
 				4417C2C31B51A4CD00ABA4BF /* Main.storyboard */,
 				4417C2BD1B51A4CD00ABA4BF /* Supporting Files */,
@@ -382,6 +385,7 @@
 				4456F9321B521822004BA1AC /* VCMapView.swift in Sources */,
 				4417C2C21B51A4CD00ABA4BF /* ViewController.swift in Sources */,
 				4417C2C01B51A4CD00ABA4BF /* AppDelegate.swift in Sources */,
+				4456F9361B5221AD004BA1AC /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

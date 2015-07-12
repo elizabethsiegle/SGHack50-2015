@@ -13,7 +13,7 @@ extension ViewController: MKMapViewDelegate {
     
     // 1
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-        //if let annotation = annotation as? Artwork {
+        if let annotation = annotation as? data {
             let identifier = "pin"
             var view: MKPinAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
@@ -29,6 +29,6 @@ extension ViewController: MKMapViewDelegate {
             }
             return view
         }
-        //return nil
-    //}
+        return nil
+    }
 }
