@@ -14,9 +14,17 @@
                             <color key="textColor" red="1" green="0.40922086093053078" blue="0.36209374523958882" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
+                        <group width="1" alignment="left" verticalAlignment="center" id="jv1-9Y-R06">
+                            <items>
+                                <label alignment="right" verticalAlignment="bottom" text="Longitude" id="OZy-lQ-Uto"/>
+                                <label alignment="left" verticalAlignment="bottom" text="Latitude" textAlignment="left" id="M5X-SG-Xhf"/>
+                            </items>
+                        </group>
                     </items>
-                    <color key="backgroundColor" red="0.18154361206446157" green="0.30962054432067942" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.0053210224389211025" green="0.0092589402532965263" blue="0.029632260101010055" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
+                        <outlet property="page1lat" destination="M5X-SG-Xhf" id="cgK-tR-stR"/>
+                        <outlet property="page1long" destination="OZy-lQ-Uto" id="rPQ-sA-Dvp"/>
                         <outlet property="titleLabel" destination="61l-O2-peT" id="Bnt-sX-rbh"/>
                         <segue destination="zwv-ZV-jGS" kind="relationship" relationship="nextPage" id="7zV-3w-fCs"/>
                     </connections>

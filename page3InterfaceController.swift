@@ -37,7 +37,7 @@ class page3InterfaceController: WKInterfaceController {
                 let jsonArray=temp["result"] as! NSArray
                 var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
                 let closestMemoryIndex=Int(locationOfMemories[0][2])
-                self.page3TWKInterfaceImage.setImage(jsonArray[closestMemoryIndex]["media"] as! String)
+                //self.page3TWKInterfaceImage.setImage(jsonArray[closestMemoryIndex]["media"] as! String)
                 
             }
 
