@@ -14,7 +14,9 @@ class InterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var dict=["a": "hello", "b": "bye"]
+        defaults.setObject(dict, forKey: "userNameKey")
         // Configure interface objects here.
     }
 

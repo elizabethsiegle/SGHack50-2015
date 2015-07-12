@@ -14,8 +14,16 @@ class page3InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var page3Label: WKInterfaceLabel!
     
+    @IBOutlet weak var page3Map: WKInterfaceMap!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let name = defaults.dictionaryForKey("userNameKey")
+        {
+            var temp=name["b"]! as! String
+            self.page3Label.setText(temp)
+        }
         
         // Configure interface objects here.
     }
@@ -23,6 +31,8 @@ class page3InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+
+        
     }
     
     override func didDeactivate() {
