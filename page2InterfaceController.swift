@@ -14,9 +14,9 @@ class page2InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var page2TitleLabel: WKInterfaceLabel!
 
-//    @IBOutlet weak var page2AuthorLabel: WKInterfaceLabel!
-//    
-//    @IBOutlet weak var page2TextLabel: WKInterfaceLabel!
+// @IBOutlet weak var page2AuthorLabel: WKInterfaceLabel!
+  
+    @IBOutlet weak var page2TextLabel: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -26,6 +26,8 @@ class page2InterfaceController: WKInterfaceController {
         // Configure interface objects here.
     }
 
+    
+    @IBOutlet weak var memoryLabel: WKInterfaceLabel!
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -37,6 +39,7 @@ class page2InterfaceController: WKInterfaceController {
             var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
             let closestMemoryIndex=Int(locationOfMemories[0][2])
             self.page2TitleLabel.setText(jsonArray[closestMemoryIndex]["title"] as! String)
+            self.memoryLabel.setText(jsonArray[closestMemoryIndex]["description"] as! String)
         
         }
 

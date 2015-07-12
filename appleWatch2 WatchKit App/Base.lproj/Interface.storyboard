@@ -54,24 +54,26 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-77" y="336"/>
+            <point key="canvasLocation" x="-124" y="383"/>
         </scene>
         <!--Page2 Interface Controller-->
         <scene sceneID="xUp-na-Nle">
             <objects>
                 <controller id="yfZ-pX-VYu" customClass="page2InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
-                        <label width="136" height="152.5" alignment="left" text="Page 2 Title" numberOfLines="5" id="c7d-nM-59C" userLabel="page2Title">
-                            <fontDescription key="font" type="system" pointSize="25"/>
+                        <label alignment="left" text="Page 2 Title" numberOfLines="5" id="c7d-nM-59C" userLabel="page2Title">
+                            <fontDescription key="font" type="system" pointSize="18"/>
                         </label>
+                        <label alignment="left" text="Label" numberOfLines="20" minimumScaleFactor="0.0" id="DGb-oY-ca7"/>
                     </items>
                     <connections>
+                        <outlet property="memoryLabel" destination="DGb-oY-ca7" id="Dhm-6S-uu9"/>
                         <outlet property="page2TitleLabel" destination="c7d-nM-59C" id="0LM-2x-jj3"/>
                         <segue destination="8FS-u9-QVT" kind="relationship" relationship="nextPage" id="yp8-ma-Utd"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="127" y="363.75"/>
+            <point key="canvasLocation" x="127" y="363"/>
         </scene>
     </scenes>
 </document>
