@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
@@ -44,9 +44,11 @@
                 <controller id="zwv-ZV-jGS" customClass="page3InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Page 3" id="UHp-7D-7ST" userLabel="thirdLabel"/>
+                        <map height="100" alignment="left" id="0vP-aE-JoU"/>
                     </items>
                     <connections>
-                        <outlet property="page3Label" destination="UHp-7D-7ST" id="XX9-lo-sVI"/>
+                        <outlet property="page3Label" destination="UHp-7D-7ST" id="zNd-23-gAr"/>
+                        <outlet property="page3Map" destination="0vP-aE-JoU" id="CkX-4N-A63"/>
                     </connections>
                 </controller>
             </objects>

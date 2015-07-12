@@ -12,13 +12,22 @@ import Foundation
 
 class page2InterfaceController: WKInterfaceController {
     
+    @IBOutlet weak var page2Label: WKInterfaceLabel!
+
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        let memory1=["text":"apple"]
+        let memory2=["text":"banana"]
         
+        var memoryArray:[Dictionary<String, String>]=[]
+        memoryArray+=[memory1]
+        memoryArray+=[memory2]
+        
+        self.page2Label.setText(memoryArray[0]["text"])
         // Configure interface objects here.
     }
 
-    @IBOutlet weak var page2Label: WKInterfaceLabel!
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

@@ -196,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				4417C2E61B51A58500ABA4BF /* Info.plist */,
+				B43BF0401B521EC400597567 /* MemoryData.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -362,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4417C2EE1B51A58500ABA4BF /* appleWatch2 WatchKit App.app in Resources */,
+				B43BF0411B521EC400597567 /* MemoryData.json in Resources */,
 				4417C2EA1B51A58500ABA4BF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
