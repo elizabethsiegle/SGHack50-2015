@@ -31,6 +31,16 @@ class page3InterfaceController: WKInterfaceController {
         
         if let temp = defaults.dictionaryForKey("json")
         {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            if let temp = defaults.dictionaryForKey("json")
+            {
+                let jsonArray=temp["result"] as! NSArray
+                var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
+                let closestMemoryIndex=Int(locationOfMemories[0][2])
+                //self.page3TWKInterfaceImage.setImage(jsonArray[closestMemoryIndex]["media"] as! String)
+                
+            }
+
             let jsonArray=temp["result"] as! NSArray
             var locationOfMemories=defaults.arrayForKey("locationOfMemories") as! [[Double]]
             for i in locationOfMemories[0..<4]{
