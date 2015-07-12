@@ -12,12 +12,13 @@ import Foundation
 
 class page3InterfaceController: WKInterfaceController {
     
+    @IBOutlet weak var page3Label: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
     }
-    @IBOutlet weak var page3Label: WKInterfaceLabel!
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

@@ -17,6 +17,7 @@ class page2InterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
     }
+
     @IBOutlet weak var page2Label: WKInterfaceLabel!
     
     override func willActivate() {
@@ -30,7 +31,7 @@ class page2InterfaceController: WKInterfaceController {
         memoryArray+=[memory1]
         memoryArray+=[memory2]
         
-        //self.page2Label.setText(memoryArray[1])
+        self.page2Label.setText(memoryArray[0]["text"])
 
     }
     

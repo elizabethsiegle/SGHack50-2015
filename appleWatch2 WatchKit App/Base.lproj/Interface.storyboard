@@ -45,6 +45,9 @@
                     <items>
                         <label alignment="left" text="Page 3" id="UHp-7D-7ST" userLabel="thirdLabel"/>
                     </items>
+                    <connections>
+                        <outlet property="page3Label" destination="UHp-7D-7ST" id="XX9-lo-sVI"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="383" y="503"/>
@@ -54,9 +57,10 @@
             <objects>
                 <controller id="yfZ-pX-VYu" customClass="page2InterfaceController" customModule="appleWatch2_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Page 2" id="XFM-SQ-75W" userLabel="secondLabel"/>
+                        <label alignment="left" text="Page 2" id="XFM-SQ-75W" userLabel="page2"/>
                     </items>
                     <connections>
+                        <outlet property="page2Label" destination="XFM-SQ-75W" id="kvO-OR-d5K"/>
                         <segue destination="zwv-ZV-jGS" kind="relationship" relationship="nextPage" id="9fD-H5-eKg"/>
                     </connections>
                 </controller>
